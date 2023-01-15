@@ -27,9 +27,9 @@ type
     btn_9: TButton;
     btn_somar: TButton;
     caixa_topo: TLayout;
-    txt_num1: TEdit;
     lb_operador: TLabel;
-    txt_num2: TEdit;
+    lb_num1: TLabel;
+    lb_num2: TLabel;
     procedure btn_subtrairClick(Sender: TObject);
     procedure btn_somarClick(Sender: TObject);
     procedure btn_multiClick(Sender: TObject);
@@ -59,28 +59,57 @@ end;
 
 procedure TForm1.btn_igualClick(Sender: TObject);
 var n1, n2, resultado : double;
+var op : char;
 begin
   n1 := strToFloat(txt_num1.Text);
   n2 := strToFloat(txt_num2.Text);
+  op := lb_operador.Text[1];
 
   // Efetuando a soma
   resultado := 0;
-  if(lb_operador.Text = '+') then
+  {if(lb_operador.Text = '+') then
   begin
     resultado := n1 + n2;
   end
+
+  // Efetuando a subtração
   else if (lb_operador.Text = '-') then
   begin
     resultado := n1 - n2;
   end
+
+  // Efetuando a multiplicação
   else if (lb_operador.Text = 'x') then
   begin
     resultado := n1 * n2;
   end
+
+  // Efetuando a divisão
   else if (lb_operador.Text = '/') then
   begin
     resultado := n1 / n2;
+  end;}
+
+  //Utilizando o switch
+
+  case op of
+    '+': begin
+      resultado := n1 + n2;
+    end;
+
+    '-': begin
+      resultado := n1 - n2;
+    end;
+
+    'x': begin
+      resultado := n1 * n2;
+    end;
+
+    '/': begin
+      resultado := n1 / n2;
+    end;
   end;
+
   ShowMessage(floatToStr(resultado));
 end;
 

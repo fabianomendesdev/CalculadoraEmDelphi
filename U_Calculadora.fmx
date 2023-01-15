@@ -170,19 +170,10 @@ object Form1: TForm1
       Size.Height = 65.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 16
-      object txt_num1: TEdit
-        Touch.InteractiveGestures = [LongTap, DoubleTap]
-        TabOrder = 1
-        Position.X = 1.000000000000000000
-        Position.Y = 16.000000000000000000
-        Size.Width = 57.000000000000000000
-        Size.Height = 33.000000000000000000
-        Size.PlatformDefault = False
-      end
       object lb_operador: TLabel
         StyledSettings = [Family, Style, FontColor]
         Position.X = 88.000000000000000000
-        Position.Y = 11.000000000000000000
+        Position.Y = 16.000000000000000000
         Size.Width = 41.000000000000000000
         Size.Height = 33.000000000000000000
         Size.PlatformDefault = False
@@ -190,14 +181,26 @@ object Form1: TForm1
         TextSettings.HorzAlign = Center
         Text = '.'
       end
-      object txt_num2: TEdit
-        Touch.InteractiveGestures = [LongTap, DoubleTap]
-        TabOrder = 0
+      object lb_num1: TLabel
+        StyledSettings = [Family, Style, FontColor]
+        Position.Y = 16.000000000000000000
+        Size.Width = 57.000000000000000000
+        Size.Height = 33.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 16.000000000000000000
+        TextSettings.HorzAlign = Center
+        Text = '0'
+      end
+      object lb_num2: TLabel
+        StyledSettings = [Family, Style, FontColor]
         Position.X = 160.000000000000000000
         Position.Y = 16.000000000000000000
         Size.Width = 57.000000000000000000
         Size.Height = 33.000000000000000000
         Size.PlatformDefault = False
+        TextSettings.Font.Size = 16.000000000000000000
+        TextSettings.HorzAlign = Center
+        Text = '0'
       end
     end
   end
